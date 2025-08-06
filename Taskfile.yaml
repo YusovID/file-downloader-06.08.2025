@@ -1,0 +1,7 @@
+version: "3"
+
+tasks:
+  run:
+    desc: "Run server"
+    cmds:
+      - go run ./cmd/file-downloader/main.go
