@@ -9,8 +9,12 @@ import (
 )
 
 type Config struct {
-	Env        string `yaml:"env" env-required:"true"`
-	HTTPServer `yaml:"http_server"`
+	Env                string   `yaml:"env" env-required:"true"`
+	MaxFilesPerTask    int      `yaml:"max_files_per_task" env=required:"true"`
+	MaxConcurrentTasks int      `yaml:"max_concurrent_tasks" env=required:"true"`
+	AllowedExtensions  []string `yaml:"allowed_extensions" env=required:"true"`
+	TempDir            string   `yaml:"temp_dir" env=required:"true"`
+	HTTPServer         `yaml:"http_server"`
 }
 
 type HTTPServer struct {
