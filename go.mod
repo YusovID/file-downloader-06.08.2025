@@ -2,7 +2,10 @@ module github.com/YusovID/file-downloader-06.08.2025
 
 go 1.24.0
 
-require github.com/ilyakaznacheev/cleanenv v1.5.0
+require (
+	github.com/google/uuid v1.6.0
+	github.com/ilyakaznacheev/cleanenv v1.5.0
+)
 
 require (
 	github.com/BurntSushi/toml v1.2.1 // indirect
